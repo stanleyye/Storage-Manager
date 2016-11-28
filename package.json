@@ -1,0 +1,34 @@
+{
+  "name": "storage-manager",
+  "version": "1.0.0",
+  "description": "A browser extension to manager your storage settings.",
+  "main": "popup.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass": "^2.3.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stanleyye/Storage-Manager.git"
+  },
+  "keywords": [
+    "storage",
+    "manager",
+    "browser",
+    "extension",
+    "cookies",
+    "cache",
+    "local",
+    "storage"
+  ],
+  "author": "Stanley Ye",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/stanleyye/Storage-Manager/issues"
+  },
+  "homepage": "https://github.com/stanleyye/Storage-Manager#readme"
+}
