@@ -57,8 +57,20 @@ function getCookies() {
         console.log(cookie);
         console.log(cookie.length);
         for (var c = 0; c < cookie.length; c++) {
-            var cookieDiv = document.getElementById("cookies");
-            cookieDiv.innerHTML += '<div>' + JSON.stringify(cookie[c]) + '</div>';
+            var cookieDiv = document.getElementById("cookieTR");
+            var cookieDomain = JSON.stringify(cookie[c].domain);
+            var cookieExpiration = JSON.stringify(cookie[c].expirationDate);
+            var cookieStoreID = JSON.stringify(cookie[c].storeId);
+            var cookieValue = JSON.stringify(cookie[c].value);
+
+            cookieDiv.innerHTML += '<tr><td>' + cookieDomain + '</td>' +
+                '<td>' + cookieExpiration + '</td>' +
+                '<td>' + cookieStoreID + '</td>' +
+                '<td>' + cookieValue + '</td></tr>';
+
+
+
+
             console.log(JSON.stringify(cookie[c]));
         }
     });
