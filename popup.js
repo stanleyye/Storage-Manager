@@ -47,10 +47,6 @@ chrome.tabs.query(queryInfo, function(tabs) {
   // alert(url); // Shows "undefined", because chrome.tabs.query is async.
 }
 
-function renderStatus(statusText) {
-    document.getElementById('status').textContent = statusText;
-}
-
 function getCookies() {
     chrome.cookies.getAll({}, function(cookie) {
         console.log(3);
@@ -65,12 +61,7 @@ function getCookies() {
 
             cookieDiv.innerHTML += '<tr><td>' + cookieDomain + '</td>' +
                 '<td>' + cookieExpiration + '</td>' +
-                '<td>' + cookieStoreID + '</td>' +
                 '<td>' + cookieValue + '</td></tr>';
-
-
-
-
             console.log(JSON.stringify(cookie[c]));
         }
     });
@@ -87,12 +78,8 @@ function getCookies() {
 
 document.addEventListener('DOMContentLoaded', function() {
     getCurrentTabUrl(function(url) {
-        // Put the image URL in Google search.
-        renderStatus('Performing Google Image search for ' + url);
-        getCookies();
-
     });
-
+    getCookies();
 
 
 });
